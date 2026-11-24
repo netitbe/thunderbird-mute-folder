@@ -1,0 +1,30 @@
+[
+  {
+    "namespace": "muteNotifications",
+    "functions": [
+      {
+        "name": "getMuted",
+        "type": "function",
+        "async": true,
+        "description": "Returns the ids of the folders explicitly muted.",
+        "parameters": []
+      },
+      {
+        "name": "setMuted",
+        "type": "function",
+        "async": true,
+        "description": "Replaces the list of explicitly muted folder ids.",
+        "parameters": [
+          { "name": "ids", "type": "array", "items": { "type": "string" } }
+        ]
+      },
+      {
+        "name": "isMuted",
+        "type": "function",
+        "async": true,
+        "description": "True if the folder, or one of its ancestors, is muted.",
+        "parameters": [{ "name": "id", "type": "string" }]
+      }
+    ]
+  }
+]

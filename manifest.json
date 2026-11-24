@@ -1,0 +1,50 @@
+{
+  "manifest_version": 2,
+  "name": "Mute Folder Notifications",
+  "version": "1.0b1",
+  "description": "Adds a folder context menu entry to mute new mail notifications for a folder and its subfolders, even when filters move mail into it.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "mute-folder-notifications@netitbe.be",
+      "strict_min_version": "140.0",
+      "strict_max_version": "140.*"
+    }
+  },
+  "permissions": [
+    "menus",
+    "accountsRead"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "experiment_apis": {
+    "muteNotifications": {
+      "schema": "schema.json",
+      "parent": {
+        "scopes": [
+          "addon_parent"
+        ],
+        "paths": [
+          [
+            "muteNotifications"
+          ]
+        ],
+        "script": "implementation.js",
+        "events": [
+          "startup"
+        ]
+      }
+    }
+  },
+  "icons": {
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "64": "icons/icon-64.png",
+    "96": "icons/icon-96.png"
+  },
+  "author": "Netitbe SPRL, Laurent Lasudry <laurent@netitbe.be>",
+  "license": "GPL-2.0-only",
+  "homepage_url": "https://github.com/netitbe/thunderbird-mute-folder"
+}
