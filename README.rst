@@ -35,20 +35,34 @@ Features
 Compatibility
 =============
 
-Thunderbird **140.0 and later** (developed and tested on 140.17.0 ESR).
+Thunderbird **140.0 to 140.x** (the 140 ESR series; developed and tested on
+140.17.0). Add-ons using Experiments must declare a maximum version, so each new
+major release has to be checked and the add-on updated.
 
 Installation
 ============
 
+This add-on relies on a Thunderbird *Experiment API*, and the Thunderbird
+Add-ons site is currently not accepting new Experiment add-ons (see
+`the announcement
+<https://thunderbird.topicbox.com/groups/addons/T6ff545fb6d479da5/temporary-pause-on-new-experiment-api-add-on-reviews>`_).
+It is therefore distributed from GitHub only, as an unsigned add-on.
+
 1. Download ``mute-folder-notifications.xpi`` from the
    `Releases page <https://github.com/netitbe/thunderbird-mute-folder/releases>`_,
    or build it yourself (see `Building`_).
-2. In Thunderbird: **Add-ons and Themes** → gear icon → **Install Add-on From
+2. Allow unsigned add-ons: open **Settings → General → Config Editor** and set
+   ``xpinstall.signatures.required`` to ``false``.
+3. In Thunderbird: **Add-ons and Themes** → gear icon → **Install Add-on From
    File…** and select the XPI.
-3. If Thunderbird refuses the unsigned add-on, open **Settings → General →
-   Config Editor** and set ``xpinstall.signatures.required`` to ``false``, then
-   retry.
 4. Restart Thunderbird.
+
+Updating
+--------
+
+There are no automatic updates. To update, download the new XPI from the
+Releases page and install it over the existing one (step 3), then restart.
+Your muted folders are kept.
 
 Usage
 =====
