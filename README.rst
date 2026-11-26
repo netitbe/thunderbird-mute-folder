@@ -1,6 +1,5 @@
-=========================
-Mute Folder Notifications
-=========================
+.. image:: docs/social-preview.png
+   :alt: Mute Folder Notifications
 
 A tiny Thunderbird add-on that lets you **mute new-mail notifications for a
 folder and its subfolders** from the folder's context menu.
@@ -9,15 +8,17 @@ Because it acts when the alert is about to be shown, it keeps working when a
 **filter moves incoming mail into a muted folder**: the message still arrives,
 but no notification pops up.
 
-.. figure:: docs/context-menu.png
+Right-click a folder and tick **Mute new mail notifications**:
+
+.. image:: docs/context-menu.png
    :alt: The "Mute new mail notifications" entry in the folder context menu
+   :width: 286px
 
-   Right-click a folder and tick **Mute new mail notifications**.
+A muted folder is marked with a discreet crossed-out bell in the folder pane:
 
-.. figure:: docs/folder-icon.png
+.. image:: docs/folder-icon.png
    :alt: A muted folder shown with a discreet bell icon in the folder pane
-
-   A muted folder is marked with a discreet crossed-out bell in the folder pane.
+   :width: 200px
 
 Features
 ========
